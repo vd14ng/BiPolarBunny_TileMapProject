@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsNotFacingCorrectDirection(Vector2 direction)
     {
-        return (direction.x > 0 && transform.localScale.x < 0) || (direction.x < 0 && transform.localScale.x > 0);
+        return direction.x > 0 && transform.localScale.x < 0 || direction.x < 0 && transform.localScale.x > 0;
     }
 
     private void SetPriorityInputDevice(Vector2 direction, object inputDevice)
